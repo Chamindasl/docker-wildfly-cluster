@@ -81,19 +81,23 @@ wildfly_1  | 19:47:40,766 INFO  [chams.open.cluster.jms.Consumer] (Thread-0 (Act
 
 
 ## Scaling up
-1. Scale up
+
+1.Scale up
 FROM ANOTHER TERMINAL (T2)
-1.1 Set N_ID to 1 (First node id is 0. This one is 1)
+
+1.1.  Set N_ID to 1 (First node id is 0. This one is 1)
 ```
  export N_ID=1
  ```
 
-1.2 Scale up
+1.2. Scale up
+
 ```
 docker-compose scale wildfly=2
 ```
 
-2. Notice
+2.Notice
+
 2.1 T2 
 ```
 Starting dockerwildflycluster_wildfly_1 ... done
@@ -147,6 +151,7 @@ wildfly_2  | 20:04:50,230 INFO  [chams.open.cluster.jms.Consumer] (Thread-6 (Act
 ## Scaling up further
 1. Scale up
 FROM ANOTHER TERMINAL (T3 to N)
+
 1.1 Set N_ID to 2 
 ```
 export N_ID=2
@@ -154,6 +159,7 @@ docker-compose scale wildfly=3
 ```
 
 2. Notice
+
 New Cluster views (above 2.3)
 Further load balancing for consumers. (above 2.4)
 
@@ -166,6 +172,7 @@ docker stop dockerwildflycluster_wildfly_1
 ```
 
 2. Notice
+
 2.1 New Leader Election
 N_ID_1 became the new Leader
 ```
