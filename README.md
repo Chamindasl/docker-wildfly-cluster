@@ -193,7 +193,7 @@ wildfly_3  | 20:35:20,230 INFO  [chams.open.cluster.jms.Consumer] (Thread-4 (Act
 ```
 
 2.2 Distributed Cache with Infinispan
-Notice that N_ID_0 Stoped at Total Total : 410 and New leader starts where old leader stoped Total : 420 
+Notice that N_ID_0 Stoped at Total Total : 410 and New leader starts from where old leader stoped Total : 420 
 ```
 wildfly_1  | 20:32:00,046 INFO  [chams.open.cluster.jms.Producer] (EJB default - 2) Sent 10 messages, Total : 410 
 wildfly_2  | 20:35:20,155 INFO  [chams.open.cluster.jms.Producer] (EJB default - 8) Sent 10 messages, Total : 420 
