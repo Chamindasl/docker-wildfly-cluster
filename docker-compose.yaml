@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  wildfly:
+    image: 'chamindasl/wildfly:latest'
+    command: "/opt/jboss/wildfly/bin/standalone.sh -c standalone-full-ha-custom.xml -Djboss.messaging.cluster.password=password -Djboss.socket.binding.port-offset=${N_ID:-0}00"
+    network_mode: "host"
+    hostname: "wildfly_${N_ID:-0}"
+
